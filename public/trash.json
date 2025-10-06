@@ -1,0 +1,24 @@
+{
+  "trashItems": [
+    {
+      "id": 1,
+      "name": "Old Phone",
+      "description": "A broken smartphone that no longer works.",
+      "disposeMethod": "Recycle",
+      "image": "/old-phone.jpg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Mobile_phone"
+    },
+    {
+      "id": 2,
+      "name": "Plastic Bottle",
+      "description": "An empty plastic water bottle.",
+      "disposeMethod": "Recycle"
+    },
+    {
+      "id": 3,
+      "name": "Newspaper",
+      "description": "A stack of old newspapers.",
+      "disposeMethod": "Recycle"
+    }
+  ]
+}

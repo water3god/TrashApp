@@ -87,9 +87,17 @@ function SearchBar() {
 }
 
 export default function TopBar() {
+  const router = useRouter();
+
+  const handleTitleClick = () => {
+    router.push("/home");
+  };
+
   return (
     <div className="w-full h-12 bg-gray-800 text-white flex items-center px-4">
-      <h1 className="text-lg font-semibold">Trash App</h1>
+      <button className="text-lg font-semibold" onClick={handleTitleClick}>
+        Trash App
+      </button>
       <div className="ml-auto flex space-x-2">
         <SearchBar />
         <TopBarButton name="Home" link="/home" />

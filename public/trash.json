@@ -5,20 +5,240 @@
       "name": "Old Phone",
       "description": "A broken smartphone that no longer works.",
       "disposeMethod": "Recycle",
-      "image": "/old-phone.jpg",
+      "image": "/trash-item-placeholder.svg",
       "wikiLink": "https://en.wikipedia.org/wiki/Mobile_phone"
     },
     {
       "id": 2,
       "name": "Plastic Bottle",
       "description": "An empty plastic water bottle.",
-      "disposeMethod": "Recycle"
+      "disposeMethod": "Recycle",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Plastic_bottle"
     },
     {
       "id": 3,
       "name": "Newspaper",
       "description": "A stack of old newspapers.",
-      "disposeMethod": "Recycle"
+      "disposeMethod": "Recycle",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Newspaper"
+    },
+    {
+      "id": 4,
+      "name": "Banana Peel",
+      "description": "Food scrap from a banana.",
+      "disposeMethod": "Compost",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Banana"
+    },
+    {
+      "id": 5,
+      "name": "Aluminum Can",
+      "description": "Empty soda or seltzer can.",
+      "disposeMethod": "Recycle",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Aluminium_can"
+    },
+    {
+      "id": 6,
+      "name": "Glass Bottle",
+      "description": "Empty glass beverage bottle.",
+      "disposeMethod": "Recycle",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Glass_bottle"
+    },
+    {
+      "id": 7,
+      "name": "Cardboard Box",
+      "description": "Flattened shipping or cereal box (remove tape).",
+      "disposeMethod": "Recycle",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Corrugated_fiberboard"
+    },
+    {
+      "id": 8,
+      "name": "Styrofoam",
+      "description": "Expanded polystyrene packaging/peanuts.",
+      "disposeMethod": "Trash",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Styrofoam"
+    },
+    {
+      "id": 9,
+      "name": "Coffee Grounds",
+      "description": "Used coffee grounds and paper filters.",
+      "disposeMethod": "Compost",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Coffee_waste"
+    },
+    {
+      "id": 10,
+      "name": "Household Batteries",
+      "description": "Single-use or rechargeable batteries.",
+      "disposeMethod": "Hazardous Waste",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Battery_recycling"
+    },
+    {
+      "id": 11,
+      "name": "Incandescent Light Bulb",
+      "description": "Standard (non-CFL/LED) bulb.",
+      "disposeMethod": "Trash",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Incandescent_light_bulb"
+    },
+    {
+      "id": 12,
+      "name": "CFL Light Bulb",
+      "description": "Compact fluorescent lamp containing a small amount of mercury.",
+      "disposeMethod": "Hazardous Waste",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Compact_fluorescent_lamp"
+    },
+    {
+      "id": 13,
+      "name": "Laptop",
+      "description": "Old or broken computer laptop.",
+      "disposeMethod": "E-waste",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Laptop"
+    },
+    {
+      "id": 14,
+      "name": "Television",
+      "description": "Old CRT or flat-panel TV.",
+      "disposeMethod": "E-waste",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Television"
+    },
+    {
+      "id": 15,
+      "name": "Clothing",
+      "description": "Wearable clothes in good condition.",
+      "disposeMethod": "Donate/Reuse",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Clothing"
+    },
+    {
+      "id": 16,
+      "name": "Food Scraps",
+      "description": "Leftover fruit and vegetable scraps.",
+      "disposeMethod": "Compost",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Food_waste"
+    },
+    {
+      "id": 17,
+      "name": "Yard Leaves",
+      "description": "Bagged leaves and small yard trimmings.",
+      "disposeMethod": "Compost",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Yard_waste"
+    },
+    {
+      "id": 18,
+      "name": "Plastic Bag",
+      "description": "Thin film plastic bag or wrap (store drop-off where available).",
+      "disposeMethod": "Trash",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Plastic_bag"
+    },
+    {
+      "id": 19,
+      "name": "Office Paper",
+      "description": "Plain paper, mail, envelopes (no plastic).",
+      "disposeMethod": "Recycle",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Paper"
+    },
+    {
+      "id": 20,
+      "name": "Paper Towel",
+      "description": "Used paper towel or napkin (no chemicals).",
+      "disposeMethod": "Compost",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Paper_towel"
+    },
+    {
+      "id": 21,
+      "name": "Pizza Box",
+      "description": "Greasy pizza box (remove any food).",
+      "disposeMethod": "Compost",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Pizza_box"
+    },
+    {
+      "id": 22,
+      "name": "Milk Carton",
+      "description": "Paperboard beverage carton (rinsed).",
+      "disposeMethod": "Recycle",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Milk_packaging"
+    },
+    {
+      "id": 23,
+      "name": "Metal Hanger",
+      "description": "Wire clothing hanger.",
+      "disposeMethod": "Donate/Reuse",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Clothes_hanger"
+    },
+    {
+      "id": 24,
+      "name": "Aerosol Can (full or unknown)",
+      "description": "Pressurized can with leftover contents.",
+      "disposeMethod": "Hazardous Waste",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Aerosol_spray"
+    },
+    {
+      "id": 25,
+      "name": "Paint (liquid)",
+      "description": "Open can with liquid paint.",
+      "disposeMethod": "Hazardous Waste",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Paint"
+    },
+    {
+      "id": 26,
+      "name": "Empty Metal Paint Can (dry)",
+      "description": "Completely empty and dry paint can with lid removed.",
+      "disposeMethod": "Recycle",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Paint_can"
+    },
+    {
+      "id": 27,
+      "name": "Printer Ink Cartridge",
+      "description": "Empty or used ink/toner cartridge (retailer take-back).",
+      "disposeMethod": "Recycle",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Ink_cartridge"
+    },
+    {
+      "id": 28,
+      "name": "Refrigerator",
+      "description": "Old appliance containing refrigerant.",
+      "disposeMethod": "E-waste",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Refrigerator"
+    },
+    {
+      "id": 29,
+      "name": "Pillow",
+      "description": "Household pillow in usable condition.",
+      "disposeMethod": "Donate/Reuse",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Pillow"
+    },
+    {
+      "id": 30,
+      "name": "Mattress",
+      "description": "Usable mattress or box spring (check local programs).",
+      "disposeMethod": "Donate/Reuse",
+      "image": "/trash-item-placeholder.svg",
+      "wikiLink": "https://en.wikipedia.org/wiki/Mattress"
     }
   ]
 }

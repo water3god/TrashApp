@@ -101,6 +101,8 @@ export default function TopBar() {
       <div className="ml-auto flex space-x-2">
         <SearchBar />
         <TopBarButton name="Home" link="/home" />
+        <TopBarButton name="Identify" link="/identify" />
+        <TopBarButton name="Catalog" link="/catalog" />
         <TopBarButton name="About" link="/about" />
         <TopBarButton name="Contact" link="/contact" />
       </div>

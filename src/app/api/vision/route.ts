@@ -17,7 +17,8 @@ export async function POST(request: Request) {
             image: { content: imageBase64 },
         });
 
-        return NextResponse.json({ labels: result.labelAnnotations }, { status: 200 });
+        const firstLabel = result.labelAnnotations?.[0] || null;
+        return NextResponse.json({ label: firstLabel }, { status: 200 });
 
     } catch (error: unknown) {
         console.error('Error processing image:', error);

@@ -1,7 +1,131 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import trash from "../../../public/trash.json";
 import Image from "next/image";
+
+interface Label {
+  description: string;
+  score: number;
+}
+
+const recyclingCategories = {
+  Recycle: [
+    "bottle",
+    "plastic",
+    "glass",
+    "aluminum",
+    "can",
+    "paper",
+    "cardboard",
+    "newspaper",
+    "magazine",
+    "metal",
+    "tin",
+    "steel",
+    "carton",
+    "packaging",
+    "container",
+    "jar",
+  ],
+  Compost: [
+    "banana",
+    "apple",
+    "food",
+    "fruit",
+    "vegetable",
+    "organic",
+    "leaf",
+    "plant",
+    "peel",
+    "core",
+    "scraps",
+    "coffee",
+    "tea",
+    "eggshell",
+  ],
+  "E-waste": [
+    "phone",
+    "computer",
+    "electronic",
+    "battery",
+    "cable",
+    "charger",
+    "laptop",
+    "tablet",
+    "device",
+    "circuit",
+    "motherboard",
+    "processor",
+  ],
+  "Hazardous Waste": [
+    "chemical",
+    "paint",
+    "oil",
+    "solvent",
+    "pesticide",
+    "cleaner",
+    "toxic",
+    "fluorescent",
+    "mercury",
+    "lead",
+  ],
+  "Donate/Reuse": [
+    "clothing",
+    "clothes",
+    "shoe",
+    "book",
+    "toy",
+    "furniture",
+    "bag",
+    "textile",
+    "fabric",
+  ],
+  Trash: [
+    "cigarette",
+    "diaper",
+    "tissue",
+    "napkin",
+    "wrapper",
+    "chip",
+    "candy",
+    "gum",
+    "straw",
+    "foam",
+    "styrofoam",
+  ],
+};
+
+function determineRecycleMethod(itemDescription: string): string | null {
+  const item = itemDescription.toLowerCase();
+
+  for (const [method, keywords] of Object.entries(recyclingCategories)) {
+    if (keywords.some((keyword) => item.includes(keyword))) {
+      return method;
+    }
+  }
+
+  for (const trashItem of trash.trashItems) {
+    if (item.includes(trashItem.name.toLowerCase())) {
+      return trashItem.disposeMethod;
+    }
+  }
+
+  return null;
+}
+
+function getRecycleMethodColor(method: string): string {
+  const colorMap: { [key: string]: string } = {
+    Recycle: "text-blue-500",
+    Compost: "text-green-600",
+    "E-waste": "text-purple-500",
+    "Hazardous Waste": "text-red-500",
+    "Donate/Reuse": "text-yellow-600",
+    Trash: "text-gray-500",
+  };
+
+  return colorMap[method] || "text-gray-500";
+}
 
 export default function IdentifierPage() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -82,9 +206,24 @@ export default function IdentifierPage() {
         });
 
         const data = await res.json();
-        const label = data.label;
 
-        setResponse(label.description);
+        if (data.labels && data.labels.length > 0) {
+          for (const label of data.labels as Label[]) {
+            console.log("Ran");
+            const method = determineRecycleMethod(label.description);
+            console.log("Determined method:", method);
+
+            if (method) {
+              setResponse(`${label.description} - ${method}`);
+              setLoading(false);
+              return;
+            }
+          }
+
+          setResponse("No item detected. Please try another photo.");
+        } else {
+          setResponse("No item detected. Please try another photo.");
+        }
         setLoading(false);
       }
     }
@@ -120,9 +259,11 @@ export default function IdentifierPage() {
           </p>
         ) : (
           response && (
-            <p className="mt-4 text-lg font-bold text-green-500">
-              Identified: {response}
-            </p>
+            <div className="mt-4 text-center">
+              <p className="text-lg font-bold text-green-500">
+                Identified: {response}
+              </p>
+            </div>
           )
         )}
         {!image ? (

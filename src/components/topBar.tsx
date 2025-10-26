@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Trash from "../../public/trash.json";
 
 function TopBarButton({ name, link }: { name: string; link?: string }) {
@@ -104,7 +104,6 @@ export default function TopBar() {
         <TopBarButton name="Identify" link="/identify" />
         <TopBarButton name="Catalog" link="/catalog" />
         <TopBarButton name="About" link="/about" />
-        <TopBarButton name="Contact" link="/contact" />
       </div>
     </div>
   );

@@ -5,15 +5,10 @@ export default function Home() {
     <div className="p-5">
       <h1 className="text-3xl font-bold">Welcome to the Trash App!</h1>
       <p className="mt-4 pb-4">
-        This website provides information on how to properly dispose of various
-        types of trash.
+        This app was built to help easily identify the recycle method for
+        various types of trash. Built By: Roger Shi
       </p>
-      <Image
-        src="/home-page-trash.jpg"
-        alt="Trash Image"
-        width={500}
-        height={300}
-      />
+      <Image src="/creator.png" alt="Trash Image" width={300} height={200} />
     </div>
   );
 }

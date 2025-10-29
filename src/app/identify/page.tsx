@@ -70,7 +70,7 @@ const recyclingCategories = {
     "mercury",
     "lead",
   ],
-  "Donate/Reuse": [
+  Donate: [
     "clothing",
     "clothes",
     "shoe",

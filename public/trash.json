@@ -5,7 +5,7 @@
       "name": "Old Phone",
       "description": "A broken smartphone that no longer works.",
       "disposeMethod": "Recycle",
-      "image": "/trash-item-placeholder.svg",
+      "image": "/Old_Phone.png",
       "wikiLink": "https://en.wikipedia.org/wiki/Mobile_phone"
     },
     {
@@ -13,7 +13,7 @@
       "name": "Plastic Bottle",
       "description": "An empty plastic water bottle.",
       "disposeMethod": "Recycle",
-      "image": "/trash-item-placeholder.svg",
+      "image": "/Plastic_Bottle.png",
       "wikiLink": "https://en.wikipedia.org/wiki/Plastic_bottle"
     },
     {
@@ -21,7 +21,7 @@
       "name": "Newspaper",
       "description": "A stack of old newspapers.",
       "disposeMethod": "Recycle",
-      "image": "/trash-item-placeholder.svg",
+      "image": "/Newspaper.png",
       "wikiLink": "https://en.wikipedia.org/wiki/Newspaper"
     },
     {
@@ -29,7 +29,7 @@
       "name": "Banana Peel",
       "description": "Food scrap from a banana.",
       "disposeMethod": "Compost",
-      "image": "/trash-item-placeholder.svg",
+      "image": "/Banana_Peel.png",
       "wikiLink": "https://en.wikipedia.org/wiki/Banana"
     },
     {
@@ -37,7 +37,7 @@
       "name": "Aluminum Can",
       "description": "Empty soda or seltzer can.",
       "disposeMethod": "Recycle",
-      "image": "/trash-item-placeholder.svg",
+      "image": "/Aluminum_Can.png",
       "wikiLink": "https://en.wikipedia.org/wiki/Aluminium_can"
     },
     {
@@ -180,7 +180,7 @@
       "id": 23,
       "name": "Metal Hanger",
       "description": "Wire clothing hanger.",
-      "disposeMethod": "Donate/Reuse",
+      "disposeMethod": "Donate",
       "image": "/trash-item-placeholder.svg",
       "wikiLink": "https://en.wikipedia.org/wiki/Clothes_hanger"
     },
@@ -228,7 +228,7 @@
       "id": 29,
       "name": "Pillow",
       "description": "Household pillow in usable condition.",
-      "disposeMethod": "Donate/Reuse",
+      "disposeMethod": "Donate",
       "image": "/trash-item-placeholder.svg",
       "wikiLink": "https://en.wikipedia.org/wiki/Pillow"
     },
@@ -236,7 +236,7 @@
       "id": 30,
       "name": "Mattress",
       "description": "Usable mattress or box spring (check local programs).",
-      "disposeMethod": "Donate/Reuse",
+      "disposeMethod": "Donate",
       "image": "/trash-item-placeholder.svg",
       "wikiLink": "https://en.wikipedia.org/wiki/Mattress"
     }

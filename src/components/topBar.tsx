@@ -2,6 +2,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import Trash from "../../public/trash.json";
+import Image from "next/image";
 
 function TopBarButton({ name, link }: { name: string; link?: string }) {
   const router = useRouter();
@@ -95,8 +96,15 @@ export default function TopBar() {
 
   return (
     <div className="w-full h-12 bg-gray-800 text-white flex items-center px-4">
-      <button className="text-lg font-semibold" onClick={handleTitleClick}>
-        Trash App
+      <Image
+        src="/Recycle_Xpert_2.jpg"
+        alt="Recycle Expert Logo"
+        width={30}
+        height={30}
+        onClick={handleTitleClick}
+      />
+      <button className="text-lg font-semibold pl-3" onClick={handleTitleClick}>
+        Recycle Expert
       </button>
       <div className="ml-auto flex space-x-2">
         <SearchBar />

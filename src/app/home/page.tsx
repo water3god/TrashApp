@@ -8,12 +8,22 @@ export default function Home() {
         This website provides information on how to properly dispose of various
         types of trash.
       </p>
-      <Image
-        src="/home-page-trash.jpg"
-        alt="Trash Image"
-        width={500}
-        height={300}
-      />
+      <div className="flex">
+        <Image
+          src={"/Recycle_Xpert_2.jpg"}
+          alt="Recycle Expert Logo"
+          width={500}
+          height={300}
+          className="p-5"
+        />
+        <Image
+          src="/home-page-trash.jpg"
+          alt="Trash Image"
+          width={700}
+          height={300}
+          className="p-5"
+        />
+      </div>
     </div>
   );
 }

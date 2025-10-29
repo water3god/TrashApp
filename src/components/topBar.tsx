@@ -16,7 +16,7 @@ function TopBarButton({ name, link }: { name: string; link?: string }) {
   return (
     <button
       onClick={handleClick}
-      className="text-white px-10 py-2 rounded-md text-sm font-bold hover:bg-gray-700"
+      className="text-white px-15 py-2 rounded-md text-lg font-bold hover:bg-gray-700"
     >
       {name}
     </button>
@@ -56,7 +56,7 @@ function SearchBar() {
       <input
         type="text"
         placeholder="Search..."
-        className="px-4 w-50 h-9 rounded-md border-1 border-gray-300 font-bold focus:ring-blue-500"
+        className="px-4 w-60 h-10 rounded-md border-1 border-gray-300 font-bold focus:ring-blue-500"
         onChange={(Bar) => {
           setSearchTerm(Bar.target.value.toLowerCase());
         }}
@@ -68,7 +68,7 @@ function SearchBar() {
         }}
       />
       <div
-        className={`mt-2 top-full w-50 text-white font-bold absolute bg-gray-800 ${
+        className={`mt-2 top-full w-50 text-white text-lg font-bold absolute bg-gray-800 ${
           inFocus ? "block" : "hidden"
         }`}
       >
@@ -95,7 +95,7 @@ export default function TopBar() {
   };
 
   return (
-    <div className="w-full h-12 bg-gray-800 text-white flex items-center px-4">
+    <div className="w-full h-15 bg-gray-800 text-white flex items-center px-4">
       <Image
         src="/Recycle_Xpert_2.jpg"
         alt="Recycle Expert Logo"

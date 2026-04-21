@@ -1,6 +1,25 @@
 import { NextResponse } from "next/server";
 import vision from "@google-cloud/vision";
 
+function createVisionClient() {
+    const rawCredentials = process.env.GOOGLE_SERVICE_ACCOUNT_KEY;
+
+    if (rawCredentials) {
+        return new vision.ImageAnnotatorClient({
+            credentials: JSON.parse(rawCredentials),
+        });
+    }
+
+    const keyFilename = process.env.GOOGLE_APPLICATION_CREDENTIALS;
+    if (keyFilename) {
+        return new vision.ImageAnnotatorClient({ keyFilename });
+    }
+
+    throw new Error(
+        "Missing Google credentials. Set GOOGLE_SERVICE_ACCOUNT_KEY on Vercel or GOOGLE_APPLICATION_CREDENTIALS locally."
+    );
+}
+
 export async function POST(request: Request) {
     try {
         const { imageBase64 } = await request.json();
@@ -9,9 +28,7 @@ export async function POST(request: Request) {
             return NextResponse.json({ error: 'No image provided' }, { status: 400 });
         }
 
-        const client = new vision.ImageAnnotatorClient({
-            keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS,
-        });
+        const client = createVisionClient();
 
         const [result] = await client.labelDetection({
             image: { content: imageBase64 },

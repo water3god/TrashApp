@@ -114,19 +114,6 @@ function determineRecycleMethod(itemDescription: string): string | null {
   return null;
 }
 
-function getRecycleMethodColor(method: string): string {
-  const colorMap: { [key: string]: string } = {
-    Recycle: "text-blue-500",
-    Compost: "text-green-600",
-    "E-waste": "text-purple-500",
-    "Hazardous Waste": "text-red-500",
-    "Donate/Reuse": "text-yellow-600",
-    Trash: "text-gray-500",
-  };
-
-  return colorMap[method] || "text-gray-500";
-}
-
 export default function IdentifierPage() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
